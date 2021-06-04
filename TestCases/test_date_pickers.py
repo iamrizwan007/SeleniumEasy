@@ -14,3 +14,4 @@ class TestDatePickers:
         bootstrap_obj = BootstrapDatePickerObject(self.driver)
         bootstrap_obj.click_date_icon()
         bootstrap_obj.verify_sunday_dates_is_disabled()
+        bootstrap_obj.select_today_date()
