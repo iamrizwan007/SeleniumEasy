@@ -21,6 +21,14 @@ class MainPageObjects:
     bootstrap_date_picker = (By.LINK_TEXT, "Bootstrap Date Picker")
     jquery_date_picker = (By.LINK_TEXT, "JQuery Date Picker")
 
+    table = (By.LINK_TEXT,"Table")
+    table_pagination = (By.LINK_TEXT, "Table Pagination")
+    table_data_search = (By.LINK_TEXT, "Table Data Search")
+    table_filter = (By.LINK_TEXT, "Table Filter")
+    table_sortSearch = (By.LINK_TEXT, "Table Sort & Search")
+    table_data_download = (By.LINK_TEXT, "Table Data Download")
+
+
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 5)
@@ -79,3 +87,22 @@ class MainPageObjects:
 
     def click_jquery_date_picker(self):
         self.driver.find_element(*MainPageObjects.jquery_date_picker).click()
+
+    def expand_table(self):
+        self.driver.find_element(*MainPageObjects.table).click()
+
+    def click_table_pagination(self):
+        self.driver.find_element(*MainPageObjects.table_pagination).click()
+
+    def click_table_data_search(self):
+        self.driver.find_element(*MainPageObjects.table_data_search).click()
+
+    def click_table_filter(self):
+        self.driver.find_element(*MainPageObjects.table_filter).click()
+
+    def click_table_sort_search(self):
+        self.driver.find_element(*MainPageObjects.table_sortSearch).click()
+
+    def click_table_data_download(self):
+        self.driver.find_element(*MainPageObjects.table_data_download).click()
+
